@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Card from "./components/Card";
+
+const card_one = {
+  title: "Card title",
+  text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  btn: "Go somewhere",
+};
+
+const card_two = {
+  title: "Special title treatment",
+  text: "With supporting text below as a natural lead-in to additional content.",
+  btn: "Go somewhere",
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card card={card_one}>
+        <img
+          src="https://via.placeholder.com/300x200"
+          className="card-img-top"
+          alt="img"
+        />
+      </Card>
+      <Card card={card_two} />
     </div>
   );
 }
